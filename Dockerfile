@@ -9,6 +9,7 @@ RUN mkdir /JobChange
 WORKDIR /JobChange
 COPY Gemfile /JobChange/Gemfile
 COPY Gemfile.lock /JobChange/Gemfile.lock
+RUN gem install bundler
 RUN bundle install
 COPY . /JobChange
 
